@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲兌換碼 - PocketChampion | 最新兌換碼</title>
+    <meta name="description" content="PocketChampion最新遊戲兌換碼，領取遊戲獎勵，包括鑽石、精靈、道具等珍貴物品">
+    <meta name="keywords" content="PocketChampion, 遊戲兌換碼, 兌換碼, 遊戲獎勵, 鑽石, 精靈, 道具">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="alternate" hreflang="en" href="https://www.PocketChampion.net/codes.html">
+    <link rel="alternate" hreflang="es" href="https://es.PocketChampion.net/codes.html">
+    <link rel="alternate" hreflang="pt" href="https://pt.PocketChampion.net/codes.html">
+    <link rel="alternate" hreflang="zh-cn" href="https://zh.PocketChampion.net/codes.html">
+    <link rel="alternate" hreflang="zh-tw" href="https://zhtw.PocketChampion.net/codes.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.PocketChampion.net/codes.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .code-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .code-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- 導航欄 -->
+    <nav class="sticky top-0 z-50 bg-dark bg-opacity-80 backdrop-blur-md text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="PocketChampion Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold">PocketChampion</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-accent transition-colors">首頁</a>
+                    <a href="features.html" class="font-medium hover:text-accent transition-colors">遊戲特色</a>
+                    <a href="guides.html" class="font-medium hover:text-accent transition-colors">遊戲攻略</a>
+                    <a href="codes.html" class="font-medium hover:text-accent transition-colors">兌換碼</a>
+                    <a href="articles.html" class="font-medium hover:text-accent transition-colors">文章資訊</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block">
+                        <select class="bg-dark text-white border border-gray-700 rounded px-2 py-1 text-sm" onchange="window.location.href = this.value">
+                            <option value="https://www.PocketChampion.net">English</option>
+                            <option value="https://es.PocketChampion.net">Español</option>
+                            <option value="https://pt.PocketChampion.net">Português</option>
+                            <option value="https://zh.PocketChampion.net">简体中文</option>
+                            <option value="https://zhtw.PocketChampion.net" selected>繁體中文</option>
+                        </select>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <i class="fa fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 移動端菜單 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 font-medium hover:text-accent transition-colors">首頁</a>
+                <a href="features.html" class="block py-2 font-medium hover:text-accent transition-colors">遊戲特色</a>
+                <a href="guides.html" class="block py-2 font-medium hover:text-accent transition-colors">遊戲攻略</a>
+                <a href="codes.html" class="block py-2 font-medium hover:text-accent transition-colors">兌換碼</a>
+                <a href="articles.html" class="block py-2 font-medium hover:text-accent transition-colors">文章資訊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區域 -->
+    <section class="relative h-64 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../images/TraditionalChinese/繁 2208X1242 1.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/90"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">遊戲兌換碼</h1>
+            <p class="text-lg md:text-xl">領取豐厚遊戲獎勵</p>
+        </div>
+    </section>
+
+    <!-- 兌換碼內容 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- 兌換說明 -->
+            <div class="bg-light rounded-2xl p-6 shadow-md mb-8">
+                <h2 class="text-2xl font-bold mb-4">兌換說明</h2>
+                <p class="text-gray-600 mb-4">1. 打開遊戲，點擊主介面右上角的「設定」按鈕</p>
+                <p class="text-gray-600 mb-4">2. 在設定介面中找到「兌換碼」選項並點擊</p>
+                <p class="text-gray-600 mb-4">3. 輸入下方的兌換碼，點擊「兌換」按鈕</p>
+                <p class="text-gray-600">4. 獎勵將直接發放到你的遊戲郵箱中</p>
+            </div>
+
+            <!-- 兌換碼列表 -->
+            <h2 class="text-2xl font-bold mb-6">最新兌換碼</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 兌換碼1 -->
+                <div class="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 shadow-lg text-white code-card card-hover">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-2">新手福利</h3>
+                        <div class="bg-white/20 rounded-lg p-4 mb-4">
+                            <code class="text-lg font-mono">POCKET2026</code>
+                        </div>
+                        <p class="mb-4">獎勵：鑽石*1000，高級精靈球*10，經驗糖果*50</p>
+                        <p class="text-sm bg-white/20 rounded px-2 py-1 inline-block">有效期：2026年12月31日</p>
+                    </div>
+                </div>
+
+                <!-- 兌換碼2 -->
+                <div class="bg-gradient-to-r from-secondary to-secondary/80 rounded-2xl p-6 shadow-lg text-white code-card card-hover">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-2">周末福利</h3>
+                        <div class="bg-white/20 rounded-lg p-4 mb-4">
+                            <code class="text-lg font-mono">WEEKEND2026</code>
+                        </div>
+                        <p class="mb-4">獎勵：鑽石*500，超級精靈球*5，太晶碎片*20</p>
+                        <p class="text-sm bg-white/20 rounded px-2 py-1 inline-block">有效期：2026年6月30日</p>
+                    </div>
+                </div>
+
+                <!-- 兌換碼3 -->
+                <div class="bg-gradient-to-r from-accent to-accent/80 rounded-2xl p-6 shadow-lg text-dark code-card card-hover">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-2">節日禮包</h3>
+                        <div class="bg-white/20 rounded-lg p-4 mb-4">
+                            <code class="text-lg font-mono">HOLIDAY2026</code>
+                        </div>
+                        <p class="mb-4">獎勵：鑽石*800，大師球*1，Mega石*1</p>
+                        <p class="text-sm bg-white/20 rounded px-2 py-1 inline-block">有效期：2026年12月31日</p>
+                    </div>
+                </div>
+
+                <!-- 兌換碼4 -->
+                <div class="bg-gradient-to-r from-dark to-dark/80 rounded-2xl p-6 shadow-lg text-white code-card card-hover">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-2">分享獎勵</h3>
+                        <div class="bg-white/20 rounded-lg p-4 mb-4">
+                            <code class="text-lg font-mono">SHARE2026</code>
+                        </div>
+                        <p class="mb-4">獎勵：鑽石*300，精靈蛋*1，進化石*5</p>
+                        <p class="text-sm bg-white/20 rounded px-2 py-1 inline-block">有效期：2026年12月31日</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 過期兌換碼 -->
+            <div class="mt-12">
+                <h2 class="text-2xl font-bold mb-6">過期兌換碼</h2>
+                <div class="bg-light rounded-2xl p-6 shadow-md">
+                    <ul class="space-y-4">
+                        <li class="flex justify-between items-center border-b border-gray-200 pb-4">
+                            <div>
+                                <h3 class="font-bold">測試兌換碼</h3>
+                                <code class="text-gray-600">TEST2026</code>
+                            </div>
+                            <span class="text-red-500 font-bold">已過期</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold">首測福利</h3>
+                                <code class="text-gray-600">CLOSET2026</code>
+                            </div>
+                            <span class="text-red-500 font-bold">已過期</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下載區域 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">立即開始你的冒險</h2>
+            <p class="text-xl mb-8">使用兌換碼，獲取豐厚獎勵</p>
+            <a href="https://game.6266game.cn/website/zdbjl/?w7cdSjjj" class="bg-white text-primary font-bold py-4 px-10 rounded-xl border-2 border-white btn-hover inline-block">
+                <i class="fa fa-download mr-2"></i>立即下載
+            </a>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PocketChampion</h3>
+                    <p class="text-gray-400">一款角色扮演戰鬥遊戲，1-9世代1000+精靈集結</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white transition-colors">兌換碼</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition-colors">文章資訊</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">聯繫我們</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">support@pocketchampion.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">關注我們</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-wechat"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PocketChampion. 保留所有權利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移動端菜單切換
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

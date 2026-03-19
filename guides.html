@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遊戲攻略 - PocketChampion | 精靈訓練師指南</title>
+    <meta name="description" content="PocketChampion遊戲攻略，包括精靈培養、戰鬥策略、太晶化和Mega進化技巧，幫助你成為最強訓練師">
+    <meta name="keywords" content="PocketChampion, 遊戲攻略, 精靈培養, 戰鬥策略, 太晶化, Mega進化">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="alternate" hreflang="en" href="https://www.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="es" href="https://es.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="pt" href="https://pt.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="zh-cn" href="https://zh.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="zh-tw" href="https://zhtw.PocketChampion.net/guides.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.PocketChampion.net/guides.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- 導航欄 -->
+    <nav class="sticky top-0 z-50 bg-dark bg-opacity-80 backdrop-blur-md text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="PocketChampion Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold">PocketChampion</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-accent transition-colors">首頁</a>
+                    <a href="features.html" class="font-medium hover:text-accent transition-colors">遊戲特色</a>
+                    <a href="guides.html" class="font-medium hover:text-accent transition-colors">遊戲攻略</a>
+                    <a href="codes.html" class="font-medium hover:text-accent transition-colors">兌換碼</a>
+                    <a href="articles.html" class="font-medium hover:text-accent transition-colors">文章資訊</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block">
+                        <select class="bg-dark text-white border border-gray-700 rounded px-2 py-1 text-sm" onchange="window.location.href = this.value">
+                            <option value="https://www.PocketChampion.net">English</option>
+                            <option value="https://es.PocketChampion.net">Español</option>
+                            <option value="https://pt.PocketChampion.net">Português</option>
+                            <option value="https://zh.PocketChampion.net">简体中文</option>
+                            <option value="https://zhtw.PocketChampion.net" selected>繁體中文</option>
+                        </select>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <i class="fa fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 移動端菜單 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 font-medium hover:text-accent transition-colors">首頁</a>
+                <a href="features.html" class="block py-2 font-medium hover:text-accent transition-colors">遊戲特色</a>
+                <a href="guides.html" class="block py-2 font-medium hover:text-accent transition-colors">遊戲攻略</a>
+                <a href="codes.html" class="block py-2 font-medium hover:text-accent transition-colors">兌換碼</a>
+                <a href="articles.html" class="block py-2 font-medium hover:text-accent transition-colors">文章資訊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區域 -->
+    <section class="relative h-64 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../images/TraditionalChinese/繁 2208X1242 1.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/90"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">遊戲攻略</h1>
+            <p class="text-lg md:text-xl">成為最強訓練師的指南</p>
+        </div>
+    </section>
+
+    <!-- 攻略內容 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 左側邊欄 -->
+                <div class="md:col-span-1">
+                    <div class="bg-light rounded-2xl p-6 shadow-md mb-8">
+                        <h3 class="text-xl font-bold mb-4">攻略分類</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#beginner" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-star mr-2"></i>
+                                    新手指南
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#training" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-heart mr-2"></i>
+                                    精靈培養
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#battle" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-bolt mr-2"></i>
+                                    戰鬥策略
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#evolution" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-magic mr-2"></i>
+                                    太晶化與Mega進化
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#team" class="flex items-center text-gray-700 hover:text-primary transition-colors">
+                                    <i class="fa fa-users mr-2"></i>
+                                    隊伍搭配
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-light rounded-2xl p-6 shadow-md">
+                        <h3 class="text-xl font-bold mb-4">熱門攻略</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    初始精靈選擇指南
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    快速升級技巧
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    太晶化最佳搭配
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-gray-700 hover:text-primary transition-colors">
+                                    多人對戰必勝策略
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 右側內容 -->
+                <div class="md:col-span-2">
+                    <!-- 新手指南 -->
+                    <div id="beginner" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">新手指南</h2>
+                        <p class="text-gray-600 mb-6">作為新手訓練師，你需要了解遊戲的基本玩法和操作。以下是一些幫助你快速上手的建議：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">選擇初始精靈</h3>
+                                    <p class="text-gray-600">從1-9代御三家中選擇一個作為你的初始夥伴。不同的精靈有不同的屬性和技能，根據你的遊戲風格選擇適合的精靈。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">完成新手任務</h3>
+                                    <p class="text-gray-600">遊戲會引導你完成一系列新手任務，幫助你熟悉遊戲操作和基本玩法。完成這些任務可以獲得豐厚的獎勵。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">探索遊戲世界</h3>
+                                    <p class="text-gray-600">在遊戲中探索不同的區域，收集精靈，挑戰道館，提升你的訓練師等級。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 精靈培養 -->
+                    <div id="training" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">精靈培養</h2>
+                        <p class="text-gray-600 mb-6">精靈的培養是成為最強訓練師的關鍵。以下是一些培養精靈的技巧：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">等級提升</h3>
+                                    <p class="text-gray-600">通過戰鬥和使用經驗值道具來提升精靈的等級。等級越高，精靈的能力值就越強。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">努力值分配</h3>
+                                    <p class="text-gray-600">通過戰鬥獲得努力值，合理分配努力值可以讓你的精靈在特定方面更為強大。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">技能學習</h3>
+                                    <p class="text-gray-600">為你的精靈學習合適的技能，根據精靈的屬性和戰鬥風格選擇最佳技能組合。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 戰鬥策略 -->
+                    <div id="battle" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">戰鬥策略</h2>
+                        <p class="text-gray-600 mb-6">戰鬥是遊戲的核心玩法，掌握戰鬥策略可以讓你在對戰中佔據優勢：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">屬性克制</h3>
+                                    <p class="text-gray-600">了解屬性克制關係，使用克制對方的技能可以造成更多傷害。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">技能搭配</h3>
+                                    <p class="text-gray-600">為你的精靈搭配不同類型的技能，以應對各種情況。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">狀態變化</h3>
+                                    <p class="text-gray-600">利用狀態變化技能來削弱對手，提升自己的能力。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 太晶化與Mega進化 -->
+                    <div id="evolution" class="bg-light rounded-2xl p-6 shadow-md mb-8 card-hover">
+                        <h2 class="text-2xl font-bold mb-4">太晶化與Mega進化</h2>
+                        <p class="text-gray-600 mb-6">太晶化和Mega進化是遊戲中的重要戰鬥機制：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">太晶化</h3>
+                                    <p class="text-gray-600">太晶化可以改變精靈的屬性，增強特定技能的威力。選擇合適的太晶屬性可以讓你的精靈在戰鬥中更具優勢。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">Mega進化</h3>
+                                    <p class="text-gray-600">Mega進化可以大幅提升精靈的能力值，改變精靈的形態和特性。在關鍵時刻使用Mega進化可以扭轉戰局。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">時機選擇</h3>
+                                    <p class="text-gray-600">掌握太晶化和Mega進化的時機，在合適的時刻使用可以最大化它們的效果。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 隊伍搭配 -->
+                    <div id="team" class="bg-light rounded-2xl p-6 shadow-md card-hover">
+                        <h2 class="text-2xl font-bold mb-4">隊伍搭配</h2>
+                        <p class="text-gray-600 mb-6">組建一個平衡的隊伍是取得勝利的關鍵：</p>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">屬性平衡</h3>
+                                    <p class="text-gray-600">選擇不同屬性的精靈，以應對各種敵人。避免隊伍中存在共同的屬性弱點。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">角色分工</h3>
+                                    <p class="text-gray-600">為隊伍中的精靈分配不同的角色，如攻擊手、防禦手、輔助手等。</p>
+                                </div>
+                            </li>
+                            <li class="flex">
+                                <div class="text-primary text-2xl mr-4">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold mb-2">戰術配合</h3>
+                                    <p class="text-gray-600">設計隊伍的戰術配合，如接力棒、天氣隊、空間隊等。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下載區域 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">立即開始你的冒險</h2>
+            <p class="text-xl mb-8">應用這些攻略技巧，成為最強訓練師</p>
+            <a href="https://game.6266game.cn/website/zdbjl/?w7cdSjjj" class="bg-white text-primary font-bold py-4 px-10 rounded-xl border-2 border-white btn-hover inline-block">
+                <i class="fa fa-download mr-2"></i>立即下載
+            </a>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PocketChampion</h3>
+                    <p class="text-gray-400">一款角色扮演戰鬥遊戲，1-9世代1000+精靈集結</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速連結</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="guides.html" class="text-gray-400 hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="codes.html" class="text-gray-400 hover:text-white transition-colors">兌換碼</a></li>
+                        <li><a href="articles.html" class="text-gray-400 hover:text-white transition-colors">文章資訊</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">聯繫我們</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">support@pocketchampion.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">關注我們</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-wechat"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PocketChampion. 保留所有權利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移動端菜單切換
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
