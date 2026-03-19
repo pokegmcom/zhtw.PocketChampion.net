@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初始精靈選擇指南 - PocketChampion遊戲攻略</title>
+    <meta name="description" content="《PocketChampion》初始精靈選擇指南，詳細介紹各代御三家的特點和優缺點，幫助你做出最適合自己的選擇">
+    <meta name="keywords" content="PocketChampion, 初始精靈, 御三家, 遊戲攻略, 精靈選擇">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="alternate" hreflang="en" href="https://www.PocketChampion.net/articles/article2.html">
+    <link rel="alternate" hreflang="es" href="https://es.PocketChampion.net/articles/article2.html">
+    <link rel="alternate" hreflang="pt" href="https://pt.PocketChampion.net/articles/article2.html">
+    <link rel="alternate" hreflang="zh-cn" href="https://zh.PocketChampion.net/articles/article2.html">
+    <link rel="alternate" hreflang="zh-tw" href="https://zhtw.PocketChampion.net/articles/article2.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.PocketChampion.net/articles/article2.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7B68EE',
+                        secondary: '#4CAF50',
+                        accent: '#FFD700',
+                        dark: '#2D2D2D',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- 導航欄 -->
+    <nav class="sticky top-0 z-50 bg-dark bg-opacity-80 backdrop-blur-md text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="../images/logo.png" alt="PocketChampion Logo" class="h-10 mr-3">
+                    <span class="text-xl font-bold">PocketChampion</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="font-medium hover:text-accent transition-colors">首頁</a>
+                    <a href="../features.html" class="font-medium hover:text-accent transition-colors">遊戲特色</a>
+                    <a href="../guides.html" class="font-medium hover:text-accent transition-colors">遊戲攻略</a>
+                    <a href="../codes.html" class="font-medium hover:text-accent transition-colors">兌換碼</a>
+                    <a href="../articles.html" class="font-medium hover:text-accent transition-colors">文章資訊</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block">
+                        <select class="bg-dark text-white border border-gray-700 rounded px-2 py-1 text-sm" onchange="window.location.href = this.value">
+                            <option value="https://www.PocketChampion.net">English</option>
+                            <option value="https://es.PocketChampion.net">Español</option>
+                            <option value="https://pt.PocketChampion.net">Português</option>
+                            <option value="https://zh.PocketChampion.net">简体中文</option>
+                            <option value="https://zhtw.PocketChampion.net" selected>繁體中文</option>
+                        </select>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white focus:outline-none">
+                            <i class="fa fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 移動端菜單 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+                <a href="../index.html" class="block py-2 font-medium hover:text-accent transition-colors">首頁</a>
+                <a href="../features.html" class="block py-2 font-medium hover:text-accent transition-colors">遊戲特色</a>
+                <a href="../guides.html" class="block py-2 font-medium hover:text-accent transition-colors">遊戲攻略</a>
+                <a href="../codes.html" class="block py-2 font-medium hover:text-accent transition-colors">兌換碼</a>
+                <a href="../articles.html" class="block py-2 font-medium hover:text-accent transition-colors">文章資訊</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 區域 -->
+    <section class="relative h-64 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../images/TraditionalChinese/3.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/90"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl px-4">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4">初始精靈選擇指南</h1>
+            <p class="text-lg md:text-xl">2026年3月10日</p>
+        </div>
+    </section>
+
+    <!-- 文章內容 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="prose max-w-none">
+                <p class="text-gray-600 mb-6">在《PocketChampion》中，玩家可以從1-9代御三家中選擇一個作為初始精靈。不同的精靈有不同的屬性和技能，選擇合適的初始精靈可以讓你的冒險之旅更加順利。本文將為你詳細介紹各代御三家的特點和優缺點，幫助你做出最適合自己的選擇。</p>
+                
+                <h2 class="text-2xl font-bold mb-4">第1代御三家</h2>
+                
+                <div class="bg-light rounded-2xl p-6 mb-6">
+                    <h3 class="text-xl font-bold mb-2">小火龍（火屬性）</h3>
+                    <p class="text-gray-600 mb-4">小火龍是一隻火屬性的精靈，最終進化為噴火龍。它的優勢在於高攻擊力和速度，適合喜歡快速攻擊的玩家。噴火龍可以Mega進化為噴火龍X（火+龍屬性）或噴火龍Y（火+飛行屬性），進一步提升能力。</p>
+                </div>
+                
+                <div class="bg-light rounded-2xl p-6 mb-6">
+                    <h3 class="text-xl font-bold mb-2">傑尼龜（水屬性）</h3>
+                    <p class="text-gray-600 mb-4">傑尼龜是一隻水屬性的精靈，最終進化為水箭龜。它的優勢在於高防禦和耐久力，適合喜歡防守策略的玩家。水箭龜可以Mega進化，進一步提升防禦能力。</p>
+                </div>
+                
+                <div class="bg-light rounded-2xl p-6 mb-6">
+                    <h3 class="text-xl font-bold mb-2">妙蛙種子（草屬性）</h3>
+                    <p class="text-gray-600 mb-4">妙蛙種子是一隻草屬性的精靈，最終進化為妙蛙花。它的優勢在於平衡和多功能性，適合喜歡平衡策略的玩家。妙蛙花可以Mega進化，進一步提升能力。</p>
+                </div>
+                
+                <h2 class="text-2xl font-bold mb-4">選擇建議</h2>
+                
+                <p class="text-gray-600 mb-6">在選擇初始精靈時，可以考慮以下因素：</p>
+                
+                <ul class="list-disc pl-6 space-y-2 mb-6">
+                    <li class="text-gray-600">你喜歡的遊戲風格（攻擊型、防守型或平衡型）</li>
+                    <li class="text-gray-600">你計劃後期收集的精靈</li>
+                    <li class="text-gray-600">各屬性的優劣勢</li>
+                    <li class="text-gray-600">Mega進化和太晶化的能力</li>
+                </ul>
+                
+                <p class="text-gray-600 mb-6">記住，沒有「正確」或「錯誤」的選擇。最重要的是選擇最適合你遊戲風格的精靈，讓你能夠享受冒險的樂趣。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相關文章 -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-center">相關文章</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+                    <img src="../images/TraditionalChinese/2.jpg" alt="PocketChampion 遊戲公測公告" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2">遊戲公測公告</h3>
+                        <p class="text-gray-600 mb-4">《PocketChampion》將於2026年3月20日正式開啟公測。</p>
+                        <a href="article1.html" class="text-primary font-medium hover:underline">閱讀更多</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+                    <img src="../images/TraditionalChinese/4.jpg" alt="PocketChampion 太晶化系統詳解" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2">太晶化系統詳解</h3>
+                        <p class="text-gray-600 mb-4">詳細介紹太晶化的原理、效果和使用技巧。</p>
+                        <a href="article3.html" class="text-primary font-medium hover:underline">閱讀更多</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md card-hover">
+                    <img src="../images/TraditionalChinese/5.jpg" alt="PocketChampion 多人對戰攻略" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-2">多人太晶對戰攻略</h3>
+                        <p class="text-gray-600 mb-4">介紹多人太晶對戰的規則、技巧和最佳隊伍搭配。</p>
+                        <a href="article4.html" class="text-primary font-medium hover:underline">閱讀更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下載區域 -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">立即開始你的冒險</h2>
+            <p class="text-xl mb-8">選擇你的初始精靈，開始冒險之旅</p>
+            <a href="https://game.6266game.cn/website/zdbjl/?w7cdSjjj" class="bg-white text-primary font-bold py-4 px-10 rounded-xl border-2 border-white btn-hover inline-block">
+                <i class="fa fa-download mr-2"></i>立即下載
+            </a>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PocketChampion</h3>
+                    <p class="text-gray-400">一款角色扮演戰鬥遊戲，1-9世代1000+精靈集結</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速鏈接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="../features.html" class="text-gray-400 hover:text-white transition-colors">遊戲特色</a></li>
+                        <li><a href="../guides.html" class="text-gray-400 hover:text-white transition-colors">遊戲攻略</a></li>
+                        <li><a href="../codes.html" class="text-gray-400 hover:text-white transition-colors">兌換碼</a></li>
+                        <li><a href="../articles.html" class="text-gray-400 hover:text-white transition-colors">文章資訊</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">聯繫我們</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">support@pocketchampion.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">關注我們</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-weibo"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-wechat"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors text-xl"><i class="fa fa-qq"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 PocketChampion. 保留所有權利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移動端菜單切換
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
